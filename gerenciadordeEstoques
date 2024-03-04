@@ -10,10 +10,10 @@ acessorios = 'ACESSÓRIOS'
 equipamentos = 'EQUIPAMENTOS'
 
 #Declaração Valor Mínimo por CATEGORIA (Constantes = NÃO ALTERAR)
-min_roupas = int(25)
-min_calcados = int(20)
-min_acessorios = int(15)
-min_equipamentos = int(12)
+MIN_ROUPAS = int(25)
+MIN_CALCADOS = int(20)
+MIN_ACESSORIOS = int(15)
+MIN_EQUIPAMENTOS = int(12)
 
 categoria1 = int(input('Conforme a numeração acima, registre a categoria do produto: '))
 if categoria1 == 1:
