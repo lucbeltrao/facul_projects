@@ -1,0 +1,136 @@
+nome1 = str(input('Digite o nome do produto que desejas estocar: ')).strip().upper()
+print('--------------------')
+print(' ROUPAS = 1 \n CALÇADOS = 2 \n ACESSÓRIOS = 3 \n EQUIPAMENTOS = 4 ')
+print('--------------------')
+
+#Declaração Variáveis CATEGORIAS
+roupas = 'ROUPAS'
+calcados = 'CALÇADOS'
+acessorios = 'ACESSÓRIOS'
+equipamentos = 'EQUIPAMENTOS'
+
+#Declaração Valor Mínimo por CATEGORIA (Constantes = NÃO ALTERAR)
+min_roupas = int(25)
+min_calcados = int(20)
+min_acessorios = int(15)
+min_equipamentos = int(12)
+
+categoria1 = int(input('Conforme a numeração acima, registre a categoria do produto: '))
+if categoria1 == 1:
+    print('Produto registrado como {}!'.format(roupas))
+    categoria1 = roupas
+elif categoria1 == 2:
+    print('Produto registrado como {}!'.format(calcados))
+    categoria1 = calcados
+elif categoria1 == 3:
+    print('Produto registrado como {}!'.format(acessorios))
+    categoria1 = acessorios
+elif categoria1 == 4:
+    print('Produto registrado como {}!'.format(equipamentos))
+    categoria1 = equipamentos
+else:
+    print('Falha ao registrar produto...')
+    exit()
+
+print('----------------------------------------')
+print('VALOR MÍNIMO PARA ESTOQUE POR CATEGORIA')
+print(' * ROUPAS = 25 itens \n * CALÇADOS = 20 itens \n * ACESSÓRIOS = 15 itens \n * EQUIPAMENTOS = 12 itens')
+quantidade1 = int(input('Digite o número de {} que será estocado:  '.format(nome1)))
+print('----------------------------------------')
+if categoria1 == roupas and quantidade1 >= min_roupas:
+    print('{} itens foram adicionados ao estoque com sucesso!'.format(quantidade1))
+    print('----------------------------------------')
+elif categoria1 == calcados and quantidade1 >= min_calcados:
+    print('{} itens foram adicionados ao estoque com sucesso!'.format(quantidade1))
+    print('----------------------------------------')
+elif categoria1 == acessorios and quantidade1 >= min_acessorios:
+    print('{} itens foram adicionados ao estoque com sucesso!'.format(quantidade1))
+    print('----------------------------------------')
+elif categoria1 == equipamentos and quantidade1 >= min_equipamentos:
+    print('{} itens foram adicionados ao estoque com sucesso!'.format(quantidade1))
+else:
+    print('Falha ao estocar produto... A quantidade digitada é inferior ao valor mínimo exigido. ')
+    exit()
+
+
+
+
+#Entrada SEGUNDO produto
+
+nome2 = str(input('Digite o nome do produto que desejas estocar: ')).strip().upper()
+print('--------------------')
+print(' ROUPAS = 1 \n CALÇADOS = 2 \n ACESSÓRIOS = 3 \n EQUIPAMENTOS = 4 ')
+print('--------------------')
+categoria2 = int(input('Conforme a numeração acima, registre a categoria do produto: '))
+if categoria2 == 1:
+    print('Produto registrado como {}!'.format(roupas))
+    categoria2 = roupas
+elif categoria2 == 2:
+    print('Produto registrado como {}!'.format(calcados))
+    categoria2 = calcados
+elif categoria2 == 3:
+    print('Produto registrado como {}!'.format(acessorios))
+    categoria2 = acessorios
+elif categoria2 == 4:
+    print('Produto registrado como {}!'.format(equipamentos))
+    categoria2 = equipamentos
+else:
+    print('Falha ao registrar produto...')
+    exit()
+
+print('----------------------------------------')
+print('VALOR MÍNIMO PARA ESTOQUE POR CATEGORIA')
+print(' * ROUPAS = 25 itens \n * CALÇADOS = 20 itens \n * ACESSÓRIOS = 15 itens \n * EQUIPAMENTOS = 12 itens')
+quantidade2 = int(input('Digite o número de {} que será estocado:  '.format(nome2)))
+print('----------------------------------------')
+if categoria2 == roupas and quantidade1 >= min_roupas:
+    print('{} itens foram adicionados ao estoque com sucesso!'.format(quantidade2))
+    print('----------------------------------------')
+elif categoria2 == calcados and quantidade1 >= min_calcados:
+    print('{} itens foram adicionados ao estoque com sucesso!'.format(quantidade2))
+    print('----------------------------------------')
+elif categoria2 == acessorios and quantidade1 >= min_acessorios:
+    print('{} itens foram adicionados ao estoque com sucesso!'.format(quantidade2))
+    print('----------------------------------------')
+elif categoria2 == equipamentos and quantidade1 >= min_equipamentos:
+    print('{} itens foram adicionados ao estoque com sucesso!'.format(quantidade2))
+else:
+    print('Falha ao estocar produto... A quantidade digitada é inferior ao valor mínimo exigido. ')
+    exit()
+
+#Total produtos
+total_produtos = quantidade1 + quantidade2
+print('Existem um total de {} produtos no estoque, sendo \n{} {} e {} {} '.format(total_produtos,quantidade1, nome1, quantidade2, nome2))
+
+#Atribuindo valor inteiro às categorias (Produto 1)
+if roupas == categoria1:
+    roupas = quantidade1
+elif calcados == categoria1:
+    calcados = quantidade1
+elif acessorios == categoria1:
+    acessorios = quantidade1
+elif equipamentos == categoria1:
+    equipamentos = quantidade1
+
+# Atribuindo valor inteiro às categorias (Produto 2)
+if roupas == categoria2:
+    roupas = quantidade2
+elif calcados == categoria2:
+    calcados = quantidade2
+elif acessorios == categoria2:
+    acessorios = quantidade2
+elif equipamentos == categoria2:
+    equipamentos = quantidade2
+
+#Porcentagem Categorias
+cat1 = quantidade1
+cat2 = quantidade2
+porcentagem1 = (cat1 / total_produtos) * 100
+porcentagem2 = (cat2 / total_produtos) * 100
+
+porcentagem1_format = round(porcentagem1, 2)
+porcentagem2_format = round(porcentagem2, 2)
+
+print('{} equivale a {}% do total do estoque ({} itens)'.format(categoria1,porcentagem1_format,total_produtos))
+print('{} equivale a {}% do total do estoque ({} itens)'.format(categoria2,porcentagem2_format,total_produtos))
+
