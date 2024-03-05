@@ -37,16 +37,16 @@ print('VALOR MÍNIMO PARA ESTOQUE POR CATEGORIA')
 print(' * ROUPAS = 25 itens \n * CALÇADOS = 20 itens \n * ACESSÓRIOS = 15 itens \n * EQUIPAMENTOS = 12 itens')
 quantidade1 = int(input('Digite o número de {} que será estocado:  '.format(nome1)))
 print('----------------------------------------')
-if categoria1 == roupas and quantidade1 >= min_roupas:
+if categoria1 == roupas and quantidade1 >= MIN_ROUPAS:
     print('{} itens foram adicionados ao estoque com sucesso!'.format(quantidade1))
     print('----------------------------------------')
-elif categoria1 == calcados and quantidade1 >= min_calcados:
+elif categoria1 == calcados and quantidade1 >= MIN_CALCADOS:
     print('{} itens foram adicionados ao estoque com sucesso!'.format(quantidade1))
     print('----------------------------------------')
-elif categoria1 == acessorios and quantidade1 >= min_acessorios:
+elif categoria1 == acessorios and quantidade1 >= MIN_ACESSORIOS:
     print('{} itens foram adicionados ao estoque com sucesso!'.format(quantidade1))
     print('----------------------------------------')
-elif categoria1 == equipamentos and quantidade1 >= min_equipamentos:
+elif categoria1 == equipamentos and quantidade1 >= MIN_EQUIPAMENTOS:
     print('{} itens foram adicionados ao estoque com sucesso!'.format(quantidade1))
 else:
     print('Falha ao estocar produto... A quantidade digitada é inferior ao valor mínimo exigido. ')
@@ -83,16 +83,16 @@ print('VALOR MÍNIMO PARA ESTOQUE POR CATEGORIA')
 print(' * ROUPAS = 25 itens \n * CALÇADOS = 20 itens \n * ACESSÓRIOS = 15 itens \n * EQUIPAMENTOS = 12 itens')
 quantidade2 = int(input('Digite o número de {} que será estocado:  '.format(nome2)))
 print('----------------------------------------')
-if categoria2 == roupas and quantidade1 >= min_roupas:
+if categoria2 == roupas and quantidade1 >= MIN_ROUPAS:
     print('{} itens foram adicionados ao estoque com sucesso!'.format(quantidade2))
     print('----------------------------------------')
-elif categoria2 == calcados and quantidade1 >= min_calcados:
+elif categoria2 == calcados and quantidade1 >= MIN_CALCADOS:
     print('{} itens foram adicionados ao estoque com sucesso!'.format(quantidade2))
     print('----------------------------------------')
-elif categoria2 == acessorios and quantidade1 >= min_acessorios:
+elif categoria2 == acessorios and quantidade1 >= MIN_ACESSORIOS:
     print('{} itens foram adicionados ao estoque com sucesso!'.format(quantidade2))
     print('----------------------------------------')
-elif categoria2 == equipamentos and quantidade1 >= min_equipamentos:
+elif categoria2 == equipamentos and quantidade1 >= MIN_EQUIPAMENTOS:
     print('{} itens foram adicionados ao estoque com sucesso!'.format(quantidade2))
 else:
     print('Falha ao estocar produto... A quantidade digitada é inferior ao valor mínimo exigido. ')
